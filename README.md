@@ -1,11 +1,13 @@
 
 Content Insert Plugin
 --------------------------
-There are 3 blocks available to insert content such as advertisement code.
->- Top logo position
+There are 6 banners available to insert content such as advertisement code.
+
 >- Header banner
->- Top of sidebar
->- Bottom of sidebar
+>- Top side banner
+>- Bottom side banner
+>- Before comments banner
+>- After comments banner
 >- Foot banner
 
 ####How to use:
