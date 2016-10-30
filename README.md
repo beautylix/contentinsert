@@ -20,13 +20,13 @@ There are 6 banners available to insert content such as advertisement code.
 
 ##Admin setting
 
-![AD](https://raw.github.com/beautylix/content-insert/master/screenshots/content-admin.png "AD")
+![AD](https://raw.github.com/beautylix/contentinsert/master/screenshots/content-admin.png "AD")
 
 ##Front
 
-![AD](https://raw.github.com/beautylix/content-insert/master/screenshots/content-ad1.png "AD")
+![AD](https://raw.github.com/beautylix/contentinsert/master/screenshots/content-ad1.png "AD")
 
-![AD](https://raw.github.com/beautylix/content-insert/master/screenshots/content-ad2.png "AD")
+![AD](https://raw.github.com/beautylix/contentinsert/master/screenshots/content-ad2.png "AD")
 
 
 ------ 
