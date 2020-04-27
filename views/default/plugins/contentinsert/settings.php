@@ -5,6 +5,8 @@
  * @link http://www.cookact.com
  * Under this agreement, No one has rights to sell this script further.
  * ***********************************************************************/
+        $publisherid = $vars['entity']->publisherid;
+        $slotnumber = $vars['entity']->slotnumber;
 
 
 	$topbanner = $vars['entity']->topbanner;
@@ -12,7 +14,7 @@
 	$aftercomments = $vars['entity']->aftercomments;
 	$sidebanner = $vars['entity']->sidebanner;
 	$sidebannertop = $vars['entity']->sidebannertop;
-        $footbanner = $vars['entity']->footbanner;
+        $trackid = $vars['entity']->trackid;
 
 
         $topmob = elgg_get_plugin_setting('topmob','contentinsert');
@@ -57,10 +59,38 @@
                 elgg_set_plugin_setting('fbmob',$fbmob,'contentinsert');
         }
 
+//enter publisher ID and slot number
+
+
+ echo elgg_echo('contentinsert:lblpublisherid');
+
+                echo elgg_view('input/text', array(
+                              'name'=> 'params[publisherid]',
+                              'value' => $publisherid));
+                          echo "<p> </p>";
+
+
+ echo elgg_echo('contentinsert:lblslotnumber');
+
+                echo elgg_view('input/text', array(
+                              'name'=> 'params[slotnumber]',
+                              'value' => $slotnumber));
+                          echo "<p> </p>";
+
+
+
 
 //top banner begin
+
  echo elgg_echo('contentinsert:lbltopbanner'); 
-				 echo "<p> </p>";
+
+                echo elgg_view('input/text', array(
+                              'name'=> 'params[topbanner]',
+                              'value' => $topbanner));
+                          echo "<p> </p>";
+
+
+
 echo elgg_echo('contentinsert:mobileshow:description');
 
 
@@ -74,10 +104,7 @@ echo elgg_echo('contentinsert:mobileshow:description');
 		
 )); 
 
-		echo elgg_view('input/plaintext', array(
-		              'name'=> 'params[topbanner]',
-			      'value' => $topbanner));
-			  echo "<p> </p>";
+echo "<p></p>";
 			  
 //top banner end	
 
@@ -85,7 +112,13 @@ echo elgg_echo('contentinsert:mobileshow:description');
 //banner before comments  begin
 
 		echo elgg_echo('contentinsert:lblbeforecomments'); 
-		echo "<p> </p>";
+		
+                echo elgg_view('input/text', array(
+                              'name'=> 'params[beforecomments]',
+                              'value' => $beforecomments));
+                          echo "<p> </p>";
+
+
 		echo elgg_echo('contentinsert:mobileshow:description');
 		
 	 
@@ -99,30 +132,21 @@ echo elgg_echo('contentinsert:mobileshow:description');
 ),
 		)); 
 
-function console_log( $acmob ){
-  echo '<script>';
-  echo 'console.log('. json_encode( $acmob ) .')';
-  echo '</script>';
-}
+echo "<p></p>";
 
-console_log($acmob);
-
-
-
-
-
-		echo elgg_view('input/plaintext', array(
-		              'name'=> 'params[beforecomments]',
-			      'value' => $beforecomments));
-			  echo "<p> </p>";
 //banner before comments end
 			  
 		  
 
 //banner after comment begin
 	echo elgg_echo('contentinsert:lblaftercomments'); 
-				  echo "<p> </p>";
-echo elgg_echo('contentinsert:mobileshow:description');		
+
+                echo elgg_view('input/text', array(
+                           'name' => 'params[aftercomments]',
+                              'value' => $aftercomments));
+
+
+	echo elgg_echo('contentinsert:mobileshow:description');		
 		  
 
 	 echo elgg_view('input/radio',array(
@@ -135,9 +159,6 @@ echo elgg_echo('contentinsert:mobileshow:description');
 
 		)); 
 		  
-		echo elgg_view('input/plaintext', array(
-	                   'name' => 'params[aftercomments]',
-		              'value' => $aftercomments));
 			   echo "<p> </p>";
 			   
 //banner after comment end			   
@@ -145,7 +166,11 @@ echo elgg_echo('contentinsert:mobileshow:description');
 //top side banner begin
 
    echo elgg_echo('contentinsert:lblsidebannertop'); 
-		          echo "<p> </p>";
+	
+echo elgg_view('input/text', array(
+                              'name' => 'params[sidebannertop]',
+                              'value' => $sidebannertop));
+
 	echo elgg_echo('contentinsert:mobileshow:description');		
 		  
 
@@ -159,9 +184,6 @@ echo elgg_echo('contentinsert:mobileshow:description');
 		
 )); 			  
 				  
-echo elgg_view('input/plaintext', array(
-	                      'name' => 'params[sidebannertop]',
-		              'value' => $sidebannertop));
 			   echo "<p> </p>";
 			   
 //top side banner end			   
@@ -169,7 +191,12 @@ echo elgg_view('input/plaintext', array(
 //bottom side banner begin
 			   
 echo elgg_echo('contentinsert:lblsidebanner'); 
-		          echo "<p> </p>";
+
+echo elgg_view('input/text', array(
+                              'name' => 'params[sidebanner]',
+                              'value' => $sidebanner));
+
+
 echo elgg_echo('contentinsert:mobileshow:description');		
 		  
 
@@ -183,9 +210,6 @@ echo elgg_echo('contentinsert:mobileshow:description');
 		
 )); 
 		
-echo elgg_view('input/plaintext', array(
-	                      'name' => 'params[sidebanner]',
-		              'value' => $sidebanner));
 			   echo "<p> </p>";
 			   
 
@@ -194,26 +218,11 @@ echo elgg_view('input/plaintext', array(
 
 //foot banner begin
 
-echo elgg_echo ('contentinsert:lblfootbanner');
-                          echo "<p> </p>";
-echo elgg_echo('contentinsert:mobileshow:description');
-
-
-         echo elgg_view('input/radio',array(
-        'name'=>'params[fbmob]',
-        'value'=> $fbmob,
-        'options'=>array(
-                                'yes' => elgg_echo('option:yes'),
-                                'no' => elgg_echo('option:no'),
-),
-
-));
-
-echo elgg_view('input/plaintext', array(
-                              'name' => 'params[footbanner]',
-                              'value' => $footbanner));
-                           echo "<p> </p>";
-
+echo elgg_echo ('contentinsert:lbltrackid');
+echo elgg_view('input/text', array(
+                              'name' => 'params[trackid]',
+                              'value' => $trackid));
+                              echo "<p></p>";
 
 //foot banner end
 
