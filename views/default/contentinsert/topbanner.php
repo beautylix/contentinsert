@@ -9,12 +9,9 @@
         $publisherid = elgg_get_plugin_setting('publisherid', 'contentinsert');
         $slotnumber = elgg_get_plugin_setting('slotnumber', 'contentinsert');
 
-
-
 	
 	if (strlen(trim($topbanner)) >0) {
-	echo "<div class = 'elgg-banner-after-comments'>";
-?>
+	echo "<div class = 'elgg-banner-after-comments'>"; ?>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
