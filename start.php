@@ -2,17 +2,18 @@
 
 /* ***********************************************************************
  * @author : Tiby Wang
- * @link http://www.cookact.com
  * Under this agreement, No one has rights to sell this script further.
  * ***********************************************************************/
  
     function contentinsert_init()
-    {
+    { }
 
-	
+        // header
+        elgg_extend_view('page/elements/head','contentinsert/headbanner');
+
 	// top banner
 	elgg_extend_view('page/elements/header','contentinsert/topbanner');
-	}
+
 	// banner before comments
 	elgg_extend_view('page/elements/comments', 'contentinsert/beforecomments', '1');
 
@@ -39,5 +40,5 @@
 	//elgg_extend_view('elgg.css', 'contentinsert/css');
  
 	elgg_register_event_handler('init','system','contentinsert_init');
- 
+
 ?>

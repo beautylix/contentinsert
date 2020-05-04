@@ -3,14 +3,13 @@
 	<name>Content Insert</name>
 	<id>contentinsert</id>
 	<author>Tiby Wang</author>
-	<version>1.0</version>
+	<version>3.1</version>
 	<category>bundled</category>
-	<description>Insert contents such as advertisement to banners</description>
-	<website>http://caijingzhi.com</website>
+	<description>Google adsense and analytics</description>
 	<license>GNU Public License version 2</license>
 	<requires>
 		<type>elgg_release</type>
-		<version>1.0</version>
+		<version>3.1</version>
 	</requires>
 	<admin_interface>simple</admin_interface>
 </plugin_manifest>
