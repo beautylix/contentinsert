@@ -5,12 +5,12 @@
  * Under this agreement, No one has rights to sell this script further.
  * ***********************************************************************/
 
-	$topbanner = elgg_get_plugin_setting('topbanner', 'contentinsert');
+	$topbanner_setting = elgg_get_plugin_setting('topbanner', 'contentinsert');
         $publisherid = elgg_get_plugin_setting('publisherid', 'contentinsert');
         $slotnumber = elgg_get_plugin_setting('slotnumber', 'contentinsert');
 
 	
-	if (strlen(trim($topbanner)) >0) {
+if ($topbanner_setting == 1) {
 	echo "<div class = 'elgg-banner-after-comments'>"; ?>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

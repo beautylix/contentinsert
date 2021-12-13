@@ -5,14 +5,14 @@
  * Under this agreement, No one has rights to sell this script further.
  * ***********************************************************************/
 
-	$sidebannertop = elgg_get_plugin_setting('sidebannertop', 'contentinsert');
+	$sidebannertop_setting = elgg_get_plugin_setting('sidebannertop', 'contentinsert');
         $publisherid = elgg_get_plugin_setting('publisherid', 'contentinsert');
         $slotnumber = elgg_get_plugin_setting('slotnumber', 'contentinsert');
 
 
 
 	
-	if (strlen(trim($sidebannertop)) >0) {
+if ($sidebannertop_setting == 1) {
 	echo "<div class = 'elgg-banner-after-comments'>";
 ?>
 

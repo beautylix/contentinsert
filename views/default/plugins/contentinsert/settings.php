@@ -4,60 +4,25 @@
  * @author : Tiby Wang
  * Under this agreement, No one has rights to sell this script further.
  * ***********************************************************************/
-        $publisherid = $vars['entity']->publisherid;
-        $slotnumber = $vars['entity']->slotnumber;
+     $publisherid = $vars['entity']->publisherid;
+     $slotnumber = $vars['entity']->slotnumber;
+	 $trackid = $vars['entity']->trackid;
 
-	$headbanner = $vars['entity']->headbanner;
-	$topbanner = $vars['entity']->topbanner;
-	$beforecomments = $vars['entity']->beforecomments;
-	$aftercomments = $vars['entity']->aftercomments;
-	$sidebanner = $vars['entity']->sidebanner;
-	$sidebannertop = $vars['entity']->sidebannertop;
-        $trackid = $vars['entity']->trackid;
+	$headbanner_setting = $vars['entity']->headbanner;
+	$topbanner_setting = $vars['entity']->topbanner;
+	$beforecomments_setting = $vars['entity']->beforecomments;
+	$aftercomments_setting = $vars['entity']->aftercomments;
+	$sidebanner_setting = $vars['entity']->sidebanner;
+	$sidebannertop_setting = $vars['entity']->sidebannertop;
+	
+    $topmob = $vars['entity']->topmob;
+	$bcmob = $vars['entity']->bcmob;
+	$acmob = $vars['entity']->acmob;
+	$stmob = $vars['entity']->stmob;
+	$sbmob = $vars['entity']->sbmob;
+	$fbmob = $vars['entity']->fbmob;
 
-
-        $topmob = elgg_get_plugin_setting('topmob','contentinsert');
-        if (!$topmob) {
-                $topmob = 'yes';
-                elgg_set_plugin_setting('topmob',$topmob,'contentinsert');
-        }
-
-
-
-	$bcmob = elgg_get_plugin_setting('bcmob','contentinsert');
-	if (!$bcmob) {
-		$bcmob = 'yes';
-		elgg_set_plugin_setting('bcmob',$bcmob,'contentinsert');
-	}
-
-
-        $acmob = elgg_get_plugin_setting('acmob','contentinsert');
-        if (!$acmob) {
-                $acmob = 'yes';
-                elgg_set_plugin_setting('acmob',$acmob,'contentinsert');
-        }
-
-
-        $stmob = elgg_get_plugin_setting('stmob','contentinsert');
-        if (!$stmob) {
-                $stmob = 'yes';
-                elgg_set_plugin_setting('stmob',$stmob,'contentinsert');
-        }
-
-
-        $sbmob = elgg_get_plugin_setting('sbmob','contentinsert');
-        if (!$sbmob) {
-                $sbmob = 'yes';
-                elgg_set_plugin_setting('sbmob',$sbmob,'contentinsert');
-        }
-
-
-        $fbmob = elgg_get_plugin_setting('fbmob','contentinsert');
-        if (!$fbmob) {
-                $fbmob = 'yes';
-                elgg_set_plugin_setting('fbmob',$fbmob,'contentinsert');
-        }
-
+	
 //enter publisher ID and slot number
 
 
@@ -66,7 +31,7 @@
                 echo elgg_view('input/text', array(
                               'name'=> 'params[publisherid]',
                               'value' => $publisherid));
-                          echo "<p> </p>";
+                          echo "  ";
 
 
  echo elgg_echo('contentinsert:lblslotnumber');
@@ -83,25 +48,21 @@
 
  echo elgg_echo('contentinsert:lbltopbanner'); 
 
-                echo elgg_view('input/text', array(
+                echo elgg_view('input/dropdown', [
                               'name'=> 'params[topbanner]',
-                              'value' => $topbanner));
-                          echo "<p> </p>";
+							  'options_values'=> ['1'=>'Yes','2'=>'No'],
+                              'value' => $topbanner_setting]);
+                          echo "  ";
 
 
 
 echo elgg_echo('contentinsert:mobileshow:description');
 
 
-	 echo elgg_view('input/radio',array(
+	 echo elgg_view('input/dropdown', [
         'name'=>'params[topmob]',
-        'value'=> $topmob,
-        'options'=>array(
-                                'yes' => elgg_echo('option:yes'),
-                                'no' => elgg_echo('option:no'),
-),
-		
-)); 
+		 'options_values'=> ['1'=>'Yes','2'=>'No'],
+        'value'=> $topmob]); 
 
 echo "<p></p>";
 			  
@@ -112,24 +73,20 @@ echo "<p></p>";
 
 		echo elgg_echo('contentinsert:lblbeforecomments'); 
 		
-                echo elgg_view('input/text', array(
+                echo elgg_view('input/dropdown', [
                               'name'=> 'params[beforecomments]',
-                              'value' => $beforecomments));
-                          echo "<p> </p>";
+							   'options_values'=> ['1'=>'Yes','2'=>'No'],
+                              'value' => $beforecomments_setting]);
+                          echo "  ";
 
 
 		echo elgg_echo('contentinsert:mobileshow:description');
 		
 	 
-
-	 echo elgg_view('input/radio',array(
+	 echo elgg_view('input/dropdown', [
         'name'=>'params[bcmob]',
-        'value'=> $bcmob,
-        'options'=>array(
-                                'yes' => elgg_echo('option:yes'),
-                                'no' => elgg_echo('option:no'),
-),
-		)); 
+		 'options_values'=> ['1'=>'Yes','2'=>'No'],
+        'value'=> $bcmob]); 
 
 echo "<p></p>";
 
@@ -140,23 +97,20 @@ echo "<p></p>";
 //banner after comment begin
 	echo elgg_echo('contentinsert:lblaftercomments'); 
 
-                echo elgg_view('input/text', array(
+                echo elgg_view('input/dropdown', [
                            'name' => 'params[aftercomments]',
-                              'value' => $aftercomments));
+						    'options_values'=> ['1'=>'Yes','2'=>'No'],
+                             'value' => $aftercomments_setting]);
+							 echo "  ";
 
 
 	echo elgg_echo('contentinsert:mobileshow:description');		
 		  
 
-	 echo elgg_view('input/radio',array(
+	 echo elgg_view('input/dropdown', [
         'name'=>'params[acmob]',
-        'value'=> $acmob,
-        'options'=>array(
-                                'yes' => elgg_echo('option:yes'),
-                                'no' => elgg_echo('option:no'),
-),
-
-		)); 
+		 'options_values'=> ['1'=>'Yes','2'=>'No'],
+        'value'=> $acmob]); 
 		  
 			   echo "<p> </p>";
 			   
@@ -166,22 +120,19 @@ echo "<p></p>";
 
    echo elgg_echo('contentinsert:lblsidebannertop'); 
 	
-echo elgg_view('input/text', array(
+echo elgg_view('input/dropdown', [
                               'name' => 'params[sidebannertop]',
-                              'value' => $sidebannertop));
+							   'options_values'=> ['1'=>'Yes','2'=>'No'],
+                              'value' => $sidebannertop_setting]);
+							  echo "  ";
 
 	echo elgg_echo('contentinsert:mobileshow:description');		
 		  
 
-	 echo elgg_view('input/radio',array(
+	 echo elgg_view('input/dropdown', [
         'name'=>'params[stmob]',
-        'value'=> $stmob,
-        'options'=>array(
-                                'yes' => elgg_echo('option:yes'),
-                                'no' => elgg_echo('option:no'),
-),
-		
-)); 			  
+		 'options_values'=> ['1'=>'Yes','2'=>'No'],
+        'value'=> $stmob]); 			  
 				  
 			   echo "<p> </p>";
 			   
@@ -191,23 +142,20 @@ echo elgg_view('input/text', array(
 			   
 echo elgg_echo('contentinsert:lblsidebanner'); 
 
-echo elgg_view('input/text', array(
+echo elgg_view('input/dropdown', [
                               'name' => 'params[sidebanner]',
-                              'value' => $sidebanner));
+							   'options_values'=> ['1'=>'Yes','2'=>'No'],
+                              'value' => $sidebanner_setting]);
+							  echo "  ";
 
 
 echo elgg_echo('contentinsert:mobileshow:description');		
 		  
 
-	 echo elgg_view('input/radio',array(
+	 echo elgg_view('input/dropdown', [
         'name'=>'params[sbmob]',
-        'value'=> $sbmob,
-        'options'=>array(
-                                'yes' => elgg_echo('option:yes'),
-                                'no' => elgg_echo('option:no'),
-),
-		
-)); 
+		 'options_values'=> ['1'=>'Yes','2'=>'No'],
+        'value'=> $sbmob]); 
 		
 			   echo "<p> </p>";
 			   

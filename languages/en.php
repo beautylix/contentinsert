@@ -7,18 +7,15 @@
  * ***********************************************************************/
 
 add_translation('en', array(
-    'contentinsert:lblbeforecomments'    => 'Ad before comments? If YES, please enter any number, for instance 1, if NO, leave it blank',
-	'contentinsert:lbltopbanner'    => 'Ad on the header? If YES, please enter any number, for instance 1, if NO, leave it blank',
-    'contentinsert:lblaftercomments'   => 'Ad after comments? If YES, please enter any number, for instance 1, if NO, leave it blank',
-    'contentinsert:lblsidebanner'  => 'Ad on the bottom of side banner? If YES, please enter any number, for instance 1, if NO, leave it blank',
-    'contentinsert:lbltrackid'  => 'Enter your Tracking ID, for example, UA-1234567-89',
-	'contentinsert:lblsidebannertop'  => 'Ad on the top of side banner? If YES, please enter any number, for instance 1, if NO, leave it blank',
+    'contentinsert:lblbeforecomments'    => 'Add ad before comments?',
+	'contentinsert:lbltopbanner'    => 'Add ad on the top banner?',
+    'contentinsert:lblaftercomments'   => 'Add ad after comments?',
+    'contentinsert:lblsidebanner'  => 'Add ad on the bottom of side banner?',
+	'contentinsert:lblsidebannertop'  => 'Add add on the top of side banner?',
 	
-	'contentinsert:mobileshow:description' => 'Show on mobile device?',
+	'contentinsert:mobileshow:description' => 'Let the ad show on mobile devices?',
 
-        'contentinsert:lblpublisherid' => 'Enter your publisher ID, only enter the number, that is, 123456789 in ca-pub-123456789',
+    'contentinsert:lblpublisherid' => 'Enter your publisher ID, only enter the number, that is, 123456789 in ca-pub-123456789',
 	'contentinsert:lblslotnumber' => 'Enter your slot number',
-
-	'option:yes' => 'Yes',
-	'option:no' => 'No',
+	'contentinsert:lbltrackid'  => 'Enter your Tracking ID, for example, UA-1234567-89',
 ));

@@ -1,6 +1,6 @@
 <?php
 	$topmob = elgg_get_plugin_setting('topmob','contentinsert');
-	if($topmob == 'No')
+	if($topmob == 2)
 	{
 ?>
 	<style>
@@ -27,7 +27,7 @@
 
 <?php
 	$bcmob = elgg_get_plugin_setting('bcmob','contentinsert');
-	if($bcmob == 'No')
+	if($bcmob == 2)
 	{
 ?>
 	<style>
@@ -64,7 +64,7 @@ console_log($acmob);
 **/
 
 
-	if($acmob == 'No')
+	if($acmob == 2)
 	{
 ?>
 	<style>
@@ -89,7 +89,7 @@ console_log($acmob);
 <?php
 	$stmob = elgg_get_plugin_setting('stmob','contentinsert');
 	
-	if($stmob == 'No')
+	if($stmob == 2)
 	{
 ?>
 	<style>
@@ -112,7 +112,7 @@ console_log($acmob);
 
 <?php
 	$sbmob = elgg_get_plugin_setting('sbmob','contentinsert');
-	if($sbmob == 'No')
+	if($sbmob == 2)
 	{
 ?>
 	<style>
@@ -138,7 +138,7 @@ console_log($acmob);
 
 <?php
         $sbmob = elgg_get_plugin_setting('fbmob','contentinsert');
-        if($sbmob == 'No')
+        if($sbmob == 2)
         {
 ?>
         <style>
