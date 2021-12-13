@@ -32,8 +32,8 @@ return [
 		'page/elements/sidebar' => [
 			'contentinsert/sidebanner' => ['priority' => 501],
 		],				
-		'page/elements/footer' => [
-			'contentinsert/footbanner' => ['priority' => 1],
+		'page/elements/foot' => [
+			'contentinsert/footbanner' => ['priority' => 600],
 		],				
 		'page/elements/footer' => [
 			'contentinsert/css' => ['priority' => 501],
