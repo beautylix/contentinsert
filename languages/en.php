@@ -17,5 +17,5 @@ add_translation('en', array(
 
     'contentinsert:lblpublisherid' => 'Enter your publisher ID, only enter the number, that is, 123456789 in ca-pub-123456789',
 	'contentinsert:lblslotnumber' => 'Enter your slot number',
-	'contentinsert:lbltrackid'  => 'Enter your Tracking ID, for example, UA-1234567-89',
+	'contentinsert:lbltrackid'  => 'Enter your Tracking ID, for example, UA-1234567-89, or G-XXXXXX',
 ));
