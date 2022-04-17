@@ -16,16 +16,8 @@ if ($beforecomments_setting == 1) {
 	echo "<div class = 'elgg-banner-after-comments'>";
 ?>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-<?php echo $publisherid;?>"
-     data-ad-slot="<?php echo $slotnumber;?>"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-<?php echo $publisherid;?>"
+     crossorigin="anonymous"></script>
 
 
 <?php	echo "</div>";
