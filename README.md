@@ -3,7 +3,11 @@ Content Insert Plugin
 --------------------------
 Google adsense and analytics.
 
-####How to use:
+#Installation
+
+>composer require beautylix/contentinsert
+
+#How to use:
 >1. Download and upload contentinsert folder to **mod/** directory.
 >2. Go to **Administrator**, **Plugin**.
 >3. Enable the Content Insert plugin.
